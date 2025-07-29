@@ -1,0 +1,53 @@
+
+.HeaderOuterContainer {
+  width: 100%;
+  background-color: #141414; /* Netflix dark background */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.HeaderContainer {
+  max-width: 1400px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HeaderLeft ul,
+.HeaderRight ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.HeaderLeft ul li,
+.HeaderRight ul li {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.HeaderLeft ul li:hover,
+.HeaderRight ul li:hover {
+  color: #e50914; /* Netflix red */
+}
+
+.HeaderLeft ul li img {
+  height: 32px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderLeft ul li:not(:first-child):not(:nth-child(2)) {
+    display: none; /* Hide extra nav items on small screens */
+  }
+  
+  .HeaderContainer {
+    padding: 10px 20px;
+  }
+}

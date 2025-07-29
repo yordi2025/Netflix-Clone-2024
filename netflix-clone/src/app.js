@@ -1,10 +1,13 @@
 import React from 'react'
 import "./app.css";
+import Home from './pages/home/Home';
 
-function app() {
+function App() {
   return (
-    <div className='App'>Netflix</div>
+    <div className="App">
+        <Home/>
+    </div>
   )
 }
 
-export default app
+export default App
